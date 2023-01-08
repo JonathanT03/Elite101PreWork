@@ -88,8 +88,8 @@ if second_question == 1:
   elif res_2_1== "stop":
     print(":(")
     exit()
-else: 
-  print(f'\n{spark5}')
+  else: 
+    print(f'\n{spark5}')
 
 if second_question == 2:
   res_2_2 = input("\n Not the most telling question, but what is your favorite number? ").lower()
@@ -117,20 +117,20 @@ if third_question == 1:
   if res_3_1 == "yes":
     print("\n The game is simple, I have picked a number from 1-100, lets see how many guesses it takes for you to pick my number. \n ")
     guess = int(input("Guess any number from 1-100: "))
-  if number != guess:
-    print("\n Incorrect")
-  while number != guess:
-    guess = int(input("\nGuess another number from 1-100: "))
-    c = c + 1
-  if guess > number:
-    print("\t \n Your guess is larger than the number!")
-  if guess < number:
-    print("\t \n your guess is smaller than the number!")
-  if number == guess:
-    print(f'\n\tCorrect, {guess} was the number!, it took you {c} tries!')
-  elif res_1_1 == "no":
-    print(f'\n {spark2}')
-  elif res_1_1 == "stop":
+    if number != guess:
+      print("\n Incorrect")
+    while number != guess:
+      guess = int(input("\nGuess another number from 1-100: "))
+      c = c + 1
+    if guess > number:
+      print("\t \n Your guess is larger than the number!")
+    if guess < number:
+      print("\t \n your guess is smaller than the number!")
+    if number == guess:
+      print(f'\n\tCorrect, {guess} was the number!, it took you {c} tries!')
+  elif res_3_1 == "no":
+    print("\n Understandable, maybe next time.")
+  elif res_3_1 == "stop":
     print(":(")
     exit()
   else:
