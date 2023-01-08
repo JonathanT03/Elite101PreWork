@@ -4,12 +4,12 @@ greeting = random.choice(["Hello there, what is your name? ", "Greetings, Haven'
 current_day = random.choice(["So first off, how would you say your day has been on a scale of 1-10? ", "From a range of 1-10, how has your day been? "])
 number = random.randint(1,100)
 second_question = random.randint(1,2)
-fourth_question = random.randint(1,2)
+fourth_question = random.randint(1,1)
 c = 0
 ### All leading open ended questions ^^^
 ### All leading yes/no or boolean type questions: below ##
 first_question = random.randint(1,2)
-third_question = random.randint(2,2)
+third_question = random.randint(1,2)
 # Random responses to certain answer ##
 spark1 = random.choice([" Really? I have laways wanted to visit that country!", ", I have heard the weather is lovely there at this time of the year.",", Always wanted to visit their Capital, maybe one day!" ])
 spark2 = random.choice(["I haven't either, :{ ", "Maybe one day!", "Same for me, I'm sure one day both of us will be able to explore the world. " ])
@@ -39,6 +39,7 @@ else:
   print("\n Not really sure what that means, but I hope its good.")
 
 print(" \n I will be asking you more questions to get to know you, if at any point you are tired of talking to me, just respond with 'stop' to my questions!")
+#####################################
 ### Discussions/questions, responses are in the format "res_question number_ random choice selection" ####
 if first_question == 1:
   res_1_1 = str(input("\n Have you ever visited a different country, yes or no? ")).lower()
@@ -152,6 +153,49 @@ if third_question == 2:
   else:
     ("\n Nice to know :)")
 ####################
+if fourth_question == 1:
+  res_4_1 = str(input("\n For my last question, what is a skill that you are good at? ")).lower()
+  if res_4_1 == "cooking" or res_4_1 == "baking":
+    print(" \n A great skill that is tons of fun, nice!" )
+    
+  elif res_4_1 == "coding" or res_4_1 == "designing":
+    print(" \n Very nice skill that take hard work, impressive!")
+  elif res_4_1 == "drawing" or res_4_1 == "painting":
+    print(" \n always wanted to be an artist myself :), nice.")
+  elif res_4_1 == "writing" or res_4_1 == "typing":
+    print(" \n excellent skill and takes forever to master I assume :)")
+  elif res_4_1 == "nothing" or res_4_1 == "dont have any":
+    print(" \n I'm sure you're good at something, maybe you just haven't found it yet.")
+  elif res_4_1 == "stop":
+    print(":(")
+    exit()
+  else:
+    print("\n Wow, not an answer I expected, that's great!")
+    
+if fourth_question == 2:
+  res_4_2 = str(input("\n To wrap things up, what is your favorite hobby? ")).lower()
+  if res_4_2 == "cooking" or res_4_2 == "baking":
+    print(" \n Love it, one of the most fun hobbies out there!" )
+    
+  elif res_4_2 == "coding" or res_4_2 == "designing":
+    print(" \n Very nice hobby that take hard work, impressive!")
+  elif res_4_2 == "drawing" or res_4_2 == "painting":
+    print(" \n always wanted to be an artist myself :), nice.")
+  elif res_4_2 == "writing" or res_4_2 == "journalism":
+    print(" \n excellent skill and takes forever to master I assume :)")
+  elif res_4_2 == "nothing" or res_4_2 == "dont have any":
+    print(" \n That's fine, don't tell me then :)")
+  elif res_4_2 == "stop":
+    print(":(")
+    exit()
+  else:
+    print("\n sounds like a great hobby!")
+    
+print(f'\n Well, {name} it was nice meeting you! I learned a few things about you, and maybe one day we we will meet again!! :]')
+
+
+  
+
 
 
 
