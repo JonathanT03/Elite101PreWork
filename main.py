@@ -9,13 +9,14 @@ c = 0
 ### All leading open ended questions ^^^
 ### All leading yes/no or boolean type questions: below ##
 first_question = random.randint(1,2)
-third_question = random.randint(1,1)
+third_question = random.randint(2,2)
 # Random responses to certain answer ##
 spark1 = random.choice([" Really? I have laways wanted to visit that country!", ", I have heard the weather is lovely there at this time of the year.",", Always wanted to visit their Capital, maybe one day!" ])
 spark2 = random.choice(["I haven't either, :{ ", "Maybe one day!", "Same for me, I'm sure one day both of us will be able to explore the world. " ])
 spark3 = random.choice([", definitely one of my favorites!", " A classic, wish I had one.", ", alright, my creator has a Great Pyrenees!" ])
 spark4 = random.choice([" Fantastic player!", " Interesting choice!", " While I am just a bot, I am fond of Lewandowski!" ])
 spark5 = random.choice([" Good choice, personally I really enjoy scanning soccer!", " Alright, not bad.!", " Not my favorite personally, but I can see why others like it. " ])
+spark6 = random.choice([", lots of history with this religion, interesting.", ", Not a religion I'm too familiar with, but cool!", ", wow, maybe one day you can teach me more!" ])
 
 
 # Start of program ##
@@ -135,6 +136,23 @@ if third_question == 1:
           print(f'\n\t Correct, {guess} was the number!, it took you {c} tries!')
   else:
     print("\n Not sure what that means :{?")
+if third_question == 2:
+  res_3_2 = str(input("\n Are you religious in any way, yes or no? ")).lower()
+  if res_3_2 == "yes" or res_3_2 == "i am":
+    religion = str(input("\n What religion do you follow? "))
+    if religion == "stop":
+      print(":(")
+      exit()
+    print(f'\n {religion}{spark6}')
+  elif res_3_2 == "no" or res_3_2 == "im not":
+    print("\n OK, I'm programmed to be the same way.")
+  elif res_3_2 == "stop":
+      print(":(")
+      exit()
+  else:
+    ("\n Nice to know :)")
+####################
+
 
 
 
