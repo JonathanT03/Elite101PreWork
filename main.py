@@ -9,7 +9,7 @@ c = 0
 ### All leading open ended questions ^^^
 ### All leading yes/no or boolean type questions: below ##
 first_question = random.randint(1,2)
-third_question = random.randint(1,2)
+third_question = random.randint(1,1)
 # Random responses to certain answer ##
 spark1 = random.choice([" Really? I have laways wanted to visit that country!", ", I have heard the weather is lovely there at this time of the year.",", Always wanted to visit their Capital, maybe one day!" ])
 spark2 = random.choice(["I haven't either, :{ ", "Maybe one day!", "Same for me, I'm sure one day both of us will be able to explore the world. " ])
@@ -114,26 +114,27 @@ if second_question == 2:
     
 if third_question == 1:
   res_3_1 = str(input("\n Would you like to play a guessing game, yes or no? ")).lower()
-  if res_3_1 == "yes":
-    print("\n The game is simple, I have picked a number from 1-100, lets see how many guesses it takes for you to pick my number. \n ")
-    guess = int(input("Guess any number from 1-100: "))
-    if number != guess:
-      print("\n Incorrect")
-    while number != guess:
-      guess = int(input("\nGuess another number from 1-100: "))
-      c = c + 1
-    if guess > number:
-      print("\t \n Your guess is larger than the number!")
-    if guess < number:
-      print("\t \n your guess is smaller than the number!")
-    if number == guess:
-      print(f'\n\tCorrect, {guess} was the number!, it took you {c} tries!')
-  elif res_3_1 == "no":
+  if res_3_1 == "no":
     print("\n Understandable, maybe next time.")
   elif res_3_1 == "stop":
     print(":(")
     exit()
+  elif res_3_1 == "yes":
+    print("\n The game is simple, I have picked a number from 1-100, lets see how many guesses it takes for you to pick my number. \n ")
+    guess = int(input(" Guess any number from 1-100: "))
+    if number != guess:
+      print("\n Incorrect")
+      while number != guess:
+        guess = int(input("\n Guess another number from 1-100: "))
+        c = c + 1
+        if guess > number:
+          print("\t \n your guess is larger than the number!")
+        if guess < number:
+          print("\t \n your guess is smaller than the number!")
+        if number == guess:
+          print(f'\n\t Correct, {guess} was the number!, it took you {c} tries!')
   else:
-    print("\n Not sure what that means :{?")                       
+    print("\n Not sure what that means :{?")
+
 
 
