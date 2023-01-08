@@ -2,6 +2,7 @@ import random
 # All responses or using the random module#
 greeting = random.choice(["Hello there, what is your name? ", "Greetings, Haven't talked to anyone in a while. What is your name? ", "Nice to Meet you, can you tell me your name? "])
 current_day = random.choice(["So first off, how would you say your day has been on a scale of 1-10? ", "From a range of 1-10, how has your day been? "])
+number = random.randint(1,100)
 second_question = random.randint(1,2)
 fourth_question = random.randint(1,2)
 ### All leading open ended questions ^^^
@@ -111,12 +112,14 @@ if res_2_2.isnumeric():
 #########################
     
 if third_question == 1:
-  res_1_1 = str(input("\n Have you ever visited a different country, yes or no? ")).lower()
-  if res_1_1 == "yes":
+  res_3_1 = str(input("\n Would you like to play a guessing game, yes or no? ")).lower()
+  if res_3_1 == "yes":
     country = str(input("\n What country was that, if you visited more than one, which was your favorite? "))
-    if country == "stop":
-      print(":(")
-      exit()
+
+
+    
+   
+    
     print(f'\n {country}{spark1}')
   elif res_1_1 == "no":
     print(f'\n {spark2}')
@@ -140,3 +143,5 @@ if first_question == 2:
       exit()
   else:
     ("\n Nice to know :)")
+
+
