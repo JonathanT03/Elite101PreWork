@@ -5,6 +5,7 @@ current_day = random.choice(["So first off, how would you say your day has been 
 number = random.randint(1,100)
 second_question = random.randint(1,2)
 fourth_question = random.randint(1,2)
+c = 0
 ### All leading open ended questions ^^^
 ### All leading yes/no or boolean type questions: below ##
 first_question = random.randint(1,2)
@@ -78,22 +79,22 @@ if second_question == 1:
       exit()
     elif player == "Messi" or player == "messi":
       print("\n One of the best to ever do it, deserved to win the World Cup!")
-    elif player == "Ronaldo" or "ronaldo":
-      print("Fan favorite, his footwork is superb!")
-    elif player == "Lewandowski" or "lewandowski":
+    elif player == "Ronaldo" or player == "ronaldo":
+      print("\n Fan favorite, his footwork is superb!")
+    elif player == "Lewandowski" or player == "lewandowski":
       print("\n Wow! He is also my favorite player! Wished Poland did better in the World Cup :/")
     else:
       print(f'\n {spark4}')
   elif res_2_1== "stop":
-      print(":(")
-      exit()
-  else: 
-    print(f'\n{spark5}')
+    print(":(")
+    exit()
+else: 
+  print(f'\n{spark5}')
 
 if second_question == 2:
   res_2_2 = input("\n Not the most telling question, but what is your favorite number? ").lower()
-if res_2_2.isnumeric():
-  res_2_2 = int(res_2_2)
+  if res_2_2 .isnumeric():
+    res_2_2 = int(res_2_2)
   if res_2_2 == "e" or res_2_2 == "pi":
     print(" \n One of the most interesting 'numbers' for sure!" )
   elif res_2_2 == 1 or res_2_2 == "one":
@@ -105,8 +106,8 @@ if res_2_2.isnumeric():
   elif res_2_2 == 666:
     print(" \n ...interesting...")
   elif res_2_2 == "stop":
-      print(":(")
-      exit()
+    print(":(")
+    exit()
   else:
     print("\n Unique!")
 #########################
@@ -114,34 +115,25 @@ if res_2_2.isnumeric():
 if third_question == 1:
   res_3_1 = str(input("\n Would you like to play a guessing game, yes or no? ")).lower()
   if res_3_1 == "yes":
-    country = str(input("\n What country was that, if you visited more than one, which was your favorite? "))
-
-
-    
-   
-    
-    print(f'\n {country}{spark1}')
+    print("\n The game is simple, I have picked a number from 1-100, lets see how many guesses it takes for you to pick my number. \n ")
+    guess = int(input("Guess any number from 1-100: "))
+  if number != guess:
+    print("\n Incorrect")
+  while number != guess:
+    guess = int(input("\nGuess another number from 1-100: "))
+    c = c + 1
+  if guess > number:
+    print("\t \n Your guess is larger than the number!")
+  if guess < number:
+    print("\t \n your guess is smaller than the number!")
+  if number == guess:
+    print(f'\n\tCorrect, {guess} was the number!, it took you {c} tries!')
   elif res_1_1 == "no":
     print(f'\n {spark2}')
   elif res_1_1 == "stop":
     print(":(")
     exit()
   else:
-    print("\n hmmm... Interesting!")                       
-if first_question == 2:
-  res_1_2 = str(input("\n Are you a cat or a dog person? ")).lower()
-  if res_1_2 == "dog" or res_1_2 == "dog person":
-    dog = str(input("\n I love dogs, what breed is your favorite? "))
-    if dog == "stop":
-      print(":(")
-      exit()
-    print(f'\n {dog}{spark3}')
-  elif res_1_2 == "cat" or res_1_2 == "cat person":
-    print("\n Gonna be honest, I don't like cats much. But good for you!")
-  elif res_1_2 == "stop":
-      print(":(")
-      exit()
-  else:
-    ("\n Nice to know :)")
+    print("\n Not sure what that means :{?")                       
 
 
